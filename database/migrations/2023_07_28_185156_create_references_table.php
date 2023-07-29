@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_reference', function (Blueprint $table) {
+        Schema::create('references', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('hardness-degree');
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_reference');
+        Schema::dropIfExists('references');
     }
 };

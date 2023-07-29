@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Chapter extends Model
 {
     use HasFactory;
+    public function Refrence(){
+        return $this->belongsTo(Refrence::class);
+    }
 }

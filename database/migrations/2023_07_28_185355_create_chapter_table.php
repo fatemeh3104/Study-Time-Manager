@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_chapter', function (Blueprint $table) {
+        Schema::create('chapter', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->integer('number_of_pages');
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_chapter');
+        Schema::dropIfExists('chapter');
     }
 };
